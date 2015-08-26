@@ -1,0 +1,1 @@
+json.extract! @fixed_deposit, :id, :debit_account_number, :amout_deposit, :deposit_type, :tenure_seposit_years, :tenure_seposit_months, :tenure_seposit_days, :pan, :maturity_proceeds, :mobile_number, :email, :age, :created_at, :updated_at

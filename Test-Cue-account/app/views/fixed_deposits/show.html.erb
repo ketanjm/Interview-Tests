@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Debit account number:</strong>
+  <%= @fixed_deposit.debit_account_number %>
+</p>
+
+<p>
+  <strong>amount deposit:</strong>
+  <%= @fixed_deposit.amount_deposit %>
+</p>
+
+<p>
+  <strong>Deposit type:</strong>
+  <%= @fixed_deposit.deposit_type %>
+</p>
+
+<p>
+  <strong>Tenure seposit years:</strong>
+  <%= @fixed_deposit.tenure_seposit_years %>
+</p>
+
+<p>
+  <strong>Tenure seposit months:</strong>
+  <%= @fixed_deposit.tenure_seposit_months %>
+</p>
+
+<p>
+  <strong>Tenure seposit days:</strong>
+  <%= @fixed_deposit.tenure_seposit_days %>
+</p>
+
+<p>
+  <strong>Pan:</strong>
+  <%= @fixed_deposit.pan %>
+</p>
+
+<p>
+  <strong>Maturity proceeds:</strong>
+  <%= @fixed_deposit.maturity_proceeds %>
+</p>
+
+<p>
+  <strong>Mobile number:</strong>
+  <%= @fixed_deposit.mobile_number %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @fixed_deposit.email %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @fixed_deposit.age %>
+</p>
+
+<%= link_to 'Edit', edit_fixed_deposit_path(@fixed_deposit) %> |
+<%= link_to 'Back', fixed_deposits_path %>
