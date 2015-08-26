@@ -1,4 +1,17 @@
-<div class="wrapper col-md-4 pull-left">
+<%= form_for(@fixed_deposit) do |f| %>
+  <% if @fixed_deposit.errors.any? %>    
+      <div id="error_explanation">
+        <h2><%= pluralize(@fixed_deposit.errors.count, "error") %> prohibited this fixed_deposit from being saved:</h2>
+
+        <ul>
+          <% @fixed_deposit.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    
+  <% end %>
+  <div class="wrapper col-md-4 pull-left">
   <ul>
     <li>Debit Account Number : </li>
     <li>Amount Of Deposit* : </li>
@@ -15,21 +28,6 @@
   </ul>
 </div>
 <div class="wrapper input-field col-md-4">
-
-<%= form_for(@fixed_deposit) do |f| %>
-  <!-- <%# if @fixed_deposit.errors.any? %>    
-      <div id="error_explanation">
-        <h2><%#= pluralize(@fixed_deposit.errors.count, "error") %> prohibited this fixed_deposit from being saved:</h2>
-
-        <ul>
-        <%# @fixed_deposit.errors.full_messages.each do |message| %>
-          <li><%#= message %></li>
-        <%# end %>
-        </ul>
-      </div>
-    
-  <%# end %> -->
-
   <ul>
     <li>
        <%= f.text_field :debit_account_number, class: "form-control" %>
@@ -77,8 +75,9 @@
   <div class="actions">
     <%= f.submit class: "btn btn-primary pull-right", data: { confirm: 'are you sure?'} %> <%= link_to 'Back', fixed_deposits_path %>
   </div>
+  </div>
 <% end %>
-</div>
+
 <div class="wrapper comment-section col-md-4">
   <ul>
     <li></li>
